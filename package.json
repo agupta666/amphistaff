@@ -1,0 +1,26 @@
+{
+  "name": "amphistaff",
+  "version": "0.0.0",
+  "description": "amphistaff ==========",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agupta666/amphistaff.git"
+  },
+  "author": "Anirban Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agupta666/amphistaff/issues"
+  },
+  "homepage": "https://github.com/agupta666/amphistaff",
+  "dependencies": {
+    "express": "^4.10.6",
+    "jade": "^1.8.2",
+    "body-parser": "^1.10.0",
+    "socket.io": "^1.2.1",
+    "redis": "^0.12.1"
+  }
+}
