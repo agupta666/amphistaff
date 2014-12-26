@@ -1,5 +1,12 @@
-var express = require("express");
+var express = require('express');
 var app = express();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
+var savedSocket;
+
+
+
 var bodyParser = require('body-parser');
 var redis = require("redis");
 var client = redis.createClient();
@@ -27,4 +34,14 @@ app.post("/save", function (req, res) {
   res.redirect('/');
 })
 
-app.listen(8080);
+app.post("/response", function (req, res) {
+  savedSocket.emit('response', req.body);
+  res.json({ 'status' : 'ok' });
+});
+
+
+io.on('connection', function (socket) {
+  savedSocket = socket;
+});
+
+server.listen(8080);
