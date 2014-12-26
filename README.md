@@ -1,4 +1,19 @@
-amphistaff
+Amphistaff
 ==========
 
-produces an edge harder than a diamond's that can stop a lightsaber.
+## Installation
+
+Install redis.
+
+```
+$ git clone <clone-url>
+$ cd amphistaff
+$ npm install
+$ node app.js
+```
+
+## Fetch Request
+
+## Push Response
+
+
